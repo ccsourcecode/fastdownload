@@ -240,7 +240,7 @@ public class XlsExportor{
 	    }
 
 	    public void processRow(ResultSet rs) throws SQLException {
-	        if (this.rowCnt == 0){
+	        if (rs.isFirst()){
 	            rs.setFetchSize(500);
 	            for (int i = 0; i < rs.getMetaData().getColumnCount(); i++){
 	                if (i == rs.getMetaData().getColumnCount() - 1){
@@ -249,18 +249,16 @@ public class XlsExportor{
 	                    this.writeToFile(pw, rs.getMetaData().getColumnName(i+1), false);
 	                }
                 }
-	            pw.println();
-                this.rowCnt++;
-	        }
-	        for (int i = 0; i < rs.getMetaData().getColumnCount(); i++){
-	            if (i == rs.getMetaData().getColumnCount() - 1){
-	                this.writeToFile(pw, rs.getObject(i+1), true);
-                }else{
-                    this.writeToFile(pw, rs.getObject(i+1), false);
+	        }else{
+                for (int i = 0; i < rs.getMetaData().getColumnCount(); i++){
+                    if (i == rs.getMetaData().getColumnCount() - 1){
+                        this.writeToFile(pw, rs.getObject(i+1), true);
+                    }else{
+                        this.writeToFile(pw, rs.getObject(i+1), false);
+                    }
                 }
             }
-	        pw.println();
-	        this.rowCnt++;
+            pw.println();
         }
 
 	    private void writeToFile(PrintWriter pw, Object valueObj, boolean isLineEnd){
