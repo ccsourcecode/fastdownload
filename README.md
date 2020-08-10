@@ -4,7 +4,9 @@ fastdownload是一个快速从页面异步导出数据的下载中心的方案�
 ## 运行
 PULL完代码后，修改application.properties中的数据库连接信息。建表脚本在`resource/db/db.sql`中。
 
-直接运行`Runner`运行，打开浏览器输入`http://127.0.0.1:8080`访问到测试页面
+`fastdownload.filePoolPath`为文件池路径，也请自行修改
+
+然后就可以直接运行`Runner`，打开浏览器输入`http://127.0.0.1:8080`访问到测试页面
 
 运行`创建测试数据`进行模拟数据创建，一次创建5w条。
 
