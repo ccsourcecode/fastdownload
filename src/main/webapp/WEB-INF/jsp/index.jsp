@@ -42,9 +42,6 @@
     <div title="创建测试数据">
         <input type="button" value="执行" onclick="deal1();">
     </div>
-    <div title="普通下载">
-        <input type="button" value="执行" onclick="deal2();">
-    </div>
     <div title="下载大容量文件">
         <input type="button" value="执行" onclick="deal3();">
         <table id="bigDataTb" class="easyui-datagrid"
