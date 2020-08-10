@@ -73,10 +73,10 @@ public class DownloadServiceImpl implements DownloadService {
 			public void setValues(PreparedStatement ps, int i) throws SQLException {
 				ps.setString(1, nameArr[random.nextInt(nameArr.length)]);
 				ps.setInt(2, random.nextInt(100));
-				ps.setString(3,"上海市新昌路" + i + "号");
+				ps.setString(3,"上海市西藏中路" + i + "号");
 				ps.setString(4, "1370000120" + random.nextInt(9));
 				ps.setString(5, "whoareu@163.com");
-				ps.setString(6, "上海瀚银技术有限公司");
+				ps.setString(6, "上海一二三四五六七八九十有限公司");
 				ps.setString(7, titleArr[random.nextInt(titleArr.length)]);
 				ps.setTimestamp(8,new Timestamp(System.currentTimeMillis()));
 			}
