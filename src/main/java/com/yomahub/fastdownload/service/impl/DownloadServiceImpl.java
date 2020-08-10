@@ -61,7 +61,7 @@ public class DownloadServiceImpl implements DownloadService {
 		final String[] nameArr = new String[]{"关羽","张飞","孟获","诸葛亮","曹操","赵云","黄忠","太史慈","周瑜","刘备",
 				"张辽","吕布","貂蝉","周仓","姜维","王平","魏延","司马懿","徐晃","马岱","曹植","典韦","许褚"};
 
-		final String[] titleArr = new String[]{"攻城狮","鼓励狮","占卜师","天文家","文学家"};
+		final String[] titleArr = new String[]{"攻城狮","鼓励狮","占卜师","天文家","文学家","科学家","生物学家","研究员"};
 
 		String sql = "insert into t_person(name,age,address,mobile,email,company,title,create_time) values(?,?,?,?,?,?,?,?)";
 
